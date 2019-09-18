@@ -1,0 +1,19 @@
+---
+# vars file for certbot (Ubuntu specific)
+
+_certbot_package_dependencies:
+  - python-pip
+  - git
+  - build-essential
+  - libssl-dev
+  - libbz2-dev
+  - libreadline-dev
+  - libsqlite3-dev
+  - wget
+  - curl
+  - llvm
+  - python-certbot-nginx
+
+_certbot_pip_dependencies:
+  - name: pipenv
+    version: "*"

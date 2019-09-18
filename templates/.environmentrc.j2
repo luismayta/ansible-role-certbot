@@ -1,0 +1,7 @@
+#!/bin/bash
+
+{% if python_environment_dict %}
+{% for key,value in python_environment_dict.items() %}
+export {{key}}='{{value}}'
+{% endfor %}
+{% endif %}

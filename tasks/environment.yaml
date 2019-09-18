@@ -1,0 +1,9 @@
+---
+
+- name: Added Environment .bashrc
+  lineinfile: dest="~/.bashrc"
+              regexp="\.environmentrc"
+              line="source {{ _certbot_path_file_environmentrc }}"
+              state=present
+  become: true
+  become_user: "{{ certbot_pyenv_owner }}"

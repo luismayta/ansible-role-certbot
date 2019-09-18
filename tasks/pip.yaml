@@ -1,0 +1,7 @@
+---
+
+- name: Install packages via pip
+  become: true
+  pip: name="{{ item.name }}" version="{{ item.version }}"
+  when: _certbot_pip_dependencies is defined
+  with_items: "{{ _certbot_pip_dependencies | default({}) }}"

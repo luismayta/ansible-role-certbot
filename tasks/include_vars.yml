@@ -1,0 +1,9 @@
+---
+
+- name: include os specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+   - "{{ ansible_distribution }}.yaml"
+   - "{{ ansible_os_family }}.yaml"
+   - "main.yaml"
+- debug: var=foo
