@@ -14,7 +14,7 @@ test:
 
 test.all:
 	@echo $(MESSAGE) Running tests on the current Python interpreter with coverage $(END)
-	$(docker-test-run) bash -c "zunit --verbose"
+	$(PIPENV_RUN) molecule test
 
 test.lint:
 	$(PIPENV_RUN) pre-commit run --all-files --verbose
