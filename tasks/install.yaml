@@ -11,6 +11,15 @@
     state: stopped
   with_items:
     - '{{ certbot_create_standalone_stop_services }}'
+
+- include: install.d/source.yaml
+  when:
+    - certbot_install_from_source == true
+
+- include: install.d/package.yaml
+  when:
+    - certbot_install_from_source == false
+
 - name: Generate new certificate if one doesn't exist.
   shell: 'certbot certonly --standalone --noninteractive --agree-tos --email {{ certbot_admin_email }} -d {{ item.item.servername}}'
   with_items: '{{ letsencrypt_cert.results }}'
