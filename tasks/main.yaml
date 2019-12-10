@@ -1,5 +1,5 @@
 ---
-- import_tasks: include-vars.yml
+- import_tasks: include-vars.yaml
 
 - include: load.yaml
 
