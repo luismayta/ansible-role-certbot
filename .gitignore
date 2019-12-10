@@ -1,9 +1,6 @@
 
-# Created by https://www.gitignore.io/api/python,node,ansible
-# Edit at https://www.gitignore.io/?templates=python,node,ansible
-
-### Ansible ###
-*.retry
+# Created by https://www.gitignore.io/api/python,node,vscode
+# Edit at https://www.gitignore.io/?templates=python,node,vscode
 
 ### Node ###
 # Logs
@@ -202,4 +199,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# End of https://www.gitignore.io/api/python,node,ansible
+#!! ERROR: vscode is undefined. Use list command to see defined gitignore types !!#
+
+# End of https://www.gitignore.io/api/python,node,vscode
+.vscode
+.vscode
