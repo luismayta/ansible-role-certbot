@@ -3,9 +3,10 @@ language: python
 dist: xenial
 services: docker
 python:
-  - "3.5"
-  - "3.6"
-  - "3.7"
+  - '3.5'
+  - '3.6'
+  - '3.7'
+  - '3.8'
 
 env:
   global:
@@ -28,7 +29,6 @@ before_script:
   - cd ../
   - mv ansible-role-$ROLE_NAME equipindustry.$ROLE_NAME
   - cd equipindustry.$ROLE_NAME
-
 
 script:
   - tox -e $TOX_ENV

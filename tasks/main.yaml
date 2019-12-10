@@ -1,5 +1,4 @@
 ---
-
 - include: include_vars.yml
 
 - include: load.yaml

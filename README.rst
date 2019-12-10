@@ -21,7 +21,6 @@ List of applications:
 
 - `Pyenv`_
 - `Docker`_
-- `Docker Compose`_
 
 Install
 -------
@@ -112,4 +111,3 @@ Made with :heart: :coffee: and :pizza: by `author`_ and `company`_.
 .. _Certbot: https://certbot.eff.org/
 .. _Pyenv: https://github.com/pyenv/pyenv
 .. _Docker: https://www.docker.com/
-.. _Docker Compose: https://docs.docker.com/compose/

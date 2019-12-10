@@ -16,4 +16,4 @@ _certbot_package_dependencies:
 
 _certbot_pip_dependencies:
   - name: pipenv
-    version: "*"
+    version: '*'

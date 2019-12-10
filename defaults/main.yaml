@@ -7,5 +7,11 @@ certbot_admin_email: email@gmail.com
 certbot_create_standalone_stop_services:
   - nginx
 certbot_vhosts:
-    - {servername: "abcyourdomain.com", documentroot: "/var/www/abcyourdomain.com"}
-    - {servername: "abcyourdomain1.com", documentroot: "/var/www/abcyourdomain1.com"}
+  - {
+      servername: 'abcyourdomain.com',
+      documentroot: '/var/www/abcyourdomain.com',
+    }
+  - {
+      servername: 'abcyourdomain1.com',
+      documentroot: '/var/www/abcyourdomain1.com',
+    }
