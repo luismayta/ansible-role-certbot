@@ -19,7 +19,6 @@ ENV PACKAGES bash \
   libgdal20 \
   libev-dev
 
-
 COPY Pipfile* /usr/src/
 
 # set working directory to /usr/src/
@@ -27,7 +26,6 @@ WORKDIR /usr/src/
 
 RUN apt-get update -y \
   && apt-get install -y ${PACKAGES} --no-install-recommends \
-
   # Permissions
   && groupadd -g 500 -r python \
   && groupadd ${USERNAME} \
