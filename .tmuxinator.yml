@@ -43,7 +43,7 @@ windows:
         - editor:
         - pwd:
         - pwd:
-  - certbot:
+  - python:
       layout: main-vertical
       panes:
         - ipython:
