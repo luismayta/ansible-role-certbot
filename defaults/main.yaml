@@ -11,18 +11,14 @@ certbot_create_standalone_stop_services:
   # - varnish
 
 certbot_vhosts:
-  - {
-      servername: 'abcyourdomain.com',
-      documentroot: '/var/www/abcyourdomain.com',
-    }
-  - {
-      servername: 'abcyourdomain1.com',
-      documentroot: '/var/www/abcyourdomain1.com',
-    }
+  - servername: 'abcyourdomain.com'
+    documentroot: '/var/www/abcyourdomain.com'
+  - servername: 'abcyourdomain1.com'
+    documentroot: '/var/www/abcyourdomain1.com'
 
 certbot_create_command: >-
   {{ certbot_script }} certonly --standalone --noninteractive --agree-tos
-  --email {{ cert_item.email | default(certbot_admin_email) }}
+  --email {{ certbot_admin_email }}
   -d {{ cert_item.domains | join(',') }}
 
 # Certbot auto-renew cron job configuration (for certificate renewals).
