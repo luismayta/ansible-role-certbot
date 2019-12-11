@@ -5,6 +5,6 @@
     "statusBar.noFolderBackground": "#2e3440"
   },
   "restructuredtext.confPath": "",
-  "python.pythonPath": "/Users/elliot/.local/share/virtualenvs/ansible-role-certbot-oigPcIuh-/Users/elliot/.pyenv/shims/python",
+  "python.pythonPath": "~/.local/share/virtualenvs/ansible-role-certbot-oigPcIuh-/Users/elliot/.pyenv/shims/python",
   "python.linting.pylintEnabled": true
 }
