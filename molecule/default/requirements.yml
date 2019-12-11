@@ -1,0 +1,3 @@
+- name: equipindustry.nginx
+  src: https://github.com/equipindustry/ansible-role-nginx
+  version: origin/develop

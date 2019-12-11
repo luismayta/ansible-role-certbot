@@ -1,6 +1,8 @@
 ---
 dependency:
-  name: galaxy
+  name: shell
+  command: pipenv run ansible-galaxy install -r molecule/default/requirements.yml --roles-path molecule/default/roles
+
 driver:
   name: docker
 lint:
@@ -10,7 +12,6 @@ platforms:
   - name: instance
     image: ubuntu:16.04
     privileged: true
-    pre_build_image: true
 
 provisioner:
   name: ansible
