@@ -1,2 +1,33 @@
 ---
 user: 'root'
+
+server:
+  name: 'equipindustry.com'
+  path: '/var/www/html'
+
+certbot_create_if_missing: yes
+certbot_create_method: standalone
+certbot_admin_email: slovacus@gmail.com
+certbot_create_standalone_stop_services:
+  - nginx
+
+certbot_vhosts:
+  - {
+      servername: '{{ server.name }}',
+      documentroot: '{{ server.path }}',
+    }
+
+# Nginx
+
+# security
+nginx_add_security_header: yes
+
+nginx_extra_http_options: |
+  underscores_in_headers on;
+  ignore_invalid_headers off;
+
+nginx_vhosts:
+  - listen: |
+      listen 80;
+      listen [::]:80;
+    server_name: '{{server.name}}'
