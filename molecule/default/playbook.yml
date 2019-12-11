@@ -6,4 +6,5 @@
       include_vars:
         file: config.yaml
   roles:
-    - role: ansible-role-python
+    - ansible-role-certbot
+    - equipindustry.nginx
