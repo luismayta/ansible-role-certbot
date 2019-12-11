@@ -18,7 +18,7 @@ def test_hosts_file(host):
 
 
 @pytest.mark.parametrize(
-    "name", [("python"), ("curl"), ("git"), ("gcc"),],
+    "name", [("python"), ("curl"), ("git"), ("gcc")],
 )
 def test_build_dependencies(host, name):
     pkg = host.package(name)
