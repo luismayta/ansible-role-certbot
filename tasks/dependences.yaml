@@ -1,11 +1,4 @@
 ---
-- name: Upgrade System
-  apt: upgrade=dist update_cache=yes
-
-- name: Add certbot repository
-  apt_repository:
-    repo: 'ppa:certbot/certbot'
-
 - name: Install certbot package dependencies
   become: true
   package:
