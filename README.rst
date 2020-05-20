@@ -4,9 +4,9 @@ Ansible Role Certbot
 |Build Status| |Ansible Galaxy| |GitHub issues| |GitHub license|
 
 :Version: 0.0.0
-:Web: https://github.com/hadenlabs/ansible-role-certbot
-:Download: http://github.com/hadenlabs/ansible-role-certbot
-:Source: http://github.com/hadenlabs/ansible-role-certbot
+:Web: https://github.com/equipindustry/ansible-role-certbot
+:Download: http://github.com/equipindustry/ansible-role-certbot
+:Source: http://github.com/equipindustry/ansible-role-certbot
 :Keywords: ansible-role-certbot
 
 .. contents:: Table of Contents:
@@ -29,7 +29,7 @@ Install it with the following command:
 
 .. code-block:: bash
 
-    $ ansible-galaxy install hadenlabs.certbot
+    $ ansible-galaxy install equipindustry.certbot
 
 Role Variables
 --------------
@@ -89,12 +89,12 @@ Made with :heart: :coffee: and :pizza: by `author`_ and `company`_.
 
 .. Badges:
 
-.. |Build Status| image:: https://travis-ci.org/hadenlabs/ansible-role-certbot.svg
-   :target: https://travis-ci.org/hadenlabs/ansible-role-certbot
-.. |Ansible Galaxy| image:: https://img.shields.io/badge/galaxy-hadenlabs.certbot-blue.svg
-   :target: https://galaxy.ansible.com/hadenlabs/ansible-role-certbot/
-.. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/ansible-role-certbot.svg
-   :target: https://github.com/hadenlabs/ansible-role-certbot/issues
+.. |Build Status| image:: https://travis-ci.org/equipindustry/ansible-role-certbot.svg
+   :target: https://travis-ci.org/equipindustry/ansible-role-certbot
+.. |Ansible Galaxy| image:: https://img.shields.io/badge/galaxy-equipindustry.certbot-blue.svg
+   :target: https://galaxy.ansible.com/equipindustry/ansible-role-certbot/
+.. |GitHub issues| image:: https://img.shields.io/github/issues/equipindustry/ansible-role-certbot.svg
+   :target: https://github.com/equipindustry/ansible-role-certbot/issues
 .. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
    :target: LICENSE
 
@@ -104,7 +104,7 @@ Made with :heart: :coffee: and :pizza: by `author`_ and `company`_.
 .. _`contributing`: docs/source/CONTRIBUTING.rst
 .. _`LICENSE`: LICENSE
 
-.. _`company`: https://github.com/hadenlabs
+.. _`company`: https://github.com/equipindustry
 .. _`author`: https://github.com/luismayta
 
 .. dependences

@@ -17,7 +17,7 @@ else
 	PIPENV_INSTALL:=
 endif
 
-TEAM := hadenlabs
+TEAM := equipindustry
 PROJECT := ansible-role-certbot
 PROJECT_PORT := 8000
 
