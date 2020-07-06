@@ -22,6 +22,7 @@ PROJECT := ansible-role-certbot
 PROJECT_PORT := 8000
 
 PYTHON_VERSION=3.8.0
+NODE_VERSION=12.14.1
 PYENV_NAME="${PROJECT}"
 
 # Configuration.
@@ -32,14 +33,7 @@ MESSAGE_HAPPY:="Done! ${MESSAGE}, Now Happy Hacking"
 SOURCE_DIR=$(ROOT_DIR)/
 PROVISION_DIR:=$(ROOT_DIR)/provision
 FILE_README:=$(ROOT_DIR)/README.rst
-KEYBASE_VOLUME_PATH ?= /Keybase
-KEYBASE_PATH ?= ${KEYBASE_VOLUME_PATH}/team/${TEAM}
-KEYS_PEM_DIR:=${KEYBASE_PATH}/pem
-KEYS_KEY_DIR:=${KEYBASE_PATH}/key
-KEYS_PUB_DIR:=${KEYBASE_PATH}/pub
-KEYS_PRIVATE_DIR:=${KEYBASE_PATH}/private/key_file/${PROJECT}
-PASSWORD_DIR:=${KEYBASE_PATH}/password
-
+PATH_DOCKER_COMPOSE:=provision/docker-compose
 PATH_DOCKER_COMPOSE:=docker-compose.yml -f provision/docker-compose
 
 DOCKER_SERVICE_DEV:=app
@@ -66,10 +60,14 @@ help:
 	@echo ''
 	@make alias.help
 	@make docker.help
+	@make docs.help
 	@make test.help
+	@make utils.help
 
 setup:
 	@echo "=====> install packages..."
+	pyenv local ${PYTHON_VERSION}
+	yarn
 	$(PIPENV_INSTALL) --dev --skip-lock
 	$(PIPENV_RUN) pre-commit install
 	$(PIPENV_RUN) pre-commit install -t pre-push
@@ -79,5 +77,6 @@ setup:
 
 environment:
 	@echo "=====> loading virtualenv ${PYENV_NAME}..."
-	@pipenv --venv || $(PIPENV_INSTALL) --skip-lock --python=${PYTHON_VERSION}
+	pyenv local ${PYTHON_VERSION}
+	@pipenv --venv || $(PIPENV_INSTALL) --python=${PYTHON_VERSION} --skip-lock
 	@echo ${MESSAGE_HAPPY}
