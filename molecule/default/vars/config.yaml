@@ -12,10 +12,7 @@ certbot_create_standalone_stop_services:
   - nginx
 
 certbot_vhosts:
-  - {
-      servername: '{{ server.name }}',
-      documentroot: '{{ server.path }}',
-    }
+  - { servername: '{{ server.name }}', documentroot: '{{ server.path }}' }
 
 # Nginx
 
