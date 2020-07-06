@@ -14,6 +14,7 @@
   with_items: '{{ certbot_vhosts }}'
 
 - name: Stop services to allow certbot to generate a cert.
+  become: true
   service:
     name: '{{ item }}'
     state: stopped
@@ -26,6 +27,7 @@
   when: item.stat.exists == False
 
 - name: Start services after cert has been generated.
+  become: true
   service:
     name: '{{ item }}'
     state: started

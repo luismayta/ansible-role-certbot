@@ -1,2 +1,7 @@
 ---
 certbot_package: certbot
+
+_certbot_create_files:
+  - path: '/var/www/letsencrypt'
+    state: 'directory'
+    owner: 'www-data'
