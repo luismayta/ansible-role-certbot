@@ -15,5 +15,5 @@ _certbot_package_dependencies:
   - python-certbot-nginx
 
 _certbot_pip_dependencies:
-  - name: pipenv
+  - name: pip
     version: '*'
