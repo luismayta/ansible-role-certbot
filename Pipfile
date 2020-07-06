@@ -27,12 +27,12 @@ pre-commit = "*"
 molecule = {extras = ["docker"],version = "*"}
 yamllint = "*"
 ansible-lint = "*"
-ansible-galaxy = "*"
 
 [packages]
 
 [scripts]
 test = "pytest"
+update = "pre-commit autoupdate"
 
 [requires]
 python_version = "3.8.0"
