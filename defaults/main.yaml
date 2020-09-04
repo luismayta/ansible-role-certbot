@@ -21,13 +21,6 @@ certbot_create_command: >-
   --email {{ certbot_admin_email }}
   -d {{ cert_item.domains | join(',') }}
 
-# Certbot auto-renew cron job configuration (for certificate renewals).
-certbot_auto_renew: true
-certbot_auto_renew_user: "{{ ansible_user | default(lookup('env', 'USER')) }}"
-certbot_auto_renew_hour: 3
-certbot_auto_renew_minute: 30
-certbot_auto_renew_options: '--quiet --no-self-upgrade'
-
 # To install from source (on older OSes or if you need a specific or newer
 # version of Certbot), set this variable to `yes` and configure other options.
 certbot_install_from_source: false
