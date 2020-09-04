@@ -4,31 +4,29 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+ansible-vault = "*"
 docker-compose = "*"
-restview = "*"
-rst = "*"
-caniusepython3 = "*"
-isort = "*"
-mypy = "*"
-pycodestyle = "*"
-pydocstyle = "*"
-pylint = "*"
-mock = "*"
-pyhamcrest = "*"
-pytest-cov = "*"
-pytest = "*"
-tox = "*"
+ipdb = "*"
 ipython = "*"
-parso = "*"
-pyyaml = "*"
+ansible-lint = "*"
+mock = ">=2.0.0"
+molecule = ">=2.20.1"
+pytest-cov = ">=2.5.1"
+pytest = ">=3.2.2"
+testinfra = ">=1.19.0"
+tox = ">=2.9.1"
+PyHamcrest = ">=1.9.0"
+ansible = "*"
+docker-py = "*"
 bumpversion = "*"
 bumplus = "*"
 pre-commit = "*"
-molecule = {extras = ["docker"],version = "*"}
-yamllint = "*"
-ansible-lint = "*"
+doc8 = "*"
+restview = "*"
+rst = "*"
 
 [packages]
+
 
 [scripts]
 test = "pytest"
