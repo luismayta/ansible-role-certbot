@@ -1,7 +1,5 @@
 FROM equipindustry/python:3.8.0-slim
 
-MAINTAINER Luis Mayta <slovacus@gmail.com>
-
 ARG stage
 
 LABEL NAME ansible-role-certbot-app-$stage
@@ -9,7 +7,15 @@ LABEL NAME ansible-role-certbot-app-$stage
 ENV USERNAME developer
 
 ENV PACKAGES bash \
-  openssl
+  git \
+  gcc \
+  libc-dev \
+  make \
+  musl-dev \
+  openssl \
+  gcc \
+  libgdal20 \
+  libev-dev
 
 
 COPY Pipfile* /usr/src/
@@ -20,6 +26,7 @@ WORKDIR /usr/src/
 # install packages
 RUN apt-get update -y \
   && apt-get install -y ${PACKAGES} --no-install-recommends \
+
 
   # Permissions
   && groupadd -g 500 -r python \
